@@ -1,0 +1,35 @@
+modLoader="javafml"
+loaderVersion="*"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="nowyoucanfishagain"
+version="1.0"
+displayName="Now You Can Fish Again"
+authors="Stronwood"
+description='''Plays a sound when you are fishing and a pokemon is on the line.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.nowyoucanfishagain]]
+    modId="minecraft"
+    type="required"
+    mandatory=true
+    versionRange="[1.20.2]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.nowyoucanfishagain]]
+    modId="pixelmon"
+    type="required"
+    mandatory=true
+    versionRange="[9.2,9.3)"
+    ordering="NONE"
+    side="BOTH"
