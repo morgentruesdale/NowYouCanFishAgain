@@ -1,6 +1,6 @@
 # Now You Can Fish Again
 
-A simple serverside Pixelmon sidemod for versions 9.2.x that aims to make fishing possible until a fix has been implemented
+A simple Pixelmon sidemod for versions 9.2.x that aims to make fishing possible until a fix has been implemented
 for the missing lines/bobbers bug present in some of these versions.
 
 
