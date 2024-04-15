@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
@@ -14,8 +15,6 @@ import java.util.Random;
 
 @EventBusSubscriber
 public class PokemonCatchEvent {
-
-	Config config = new Config();
 
 	@SubscribeEvent
 	public void onFishCatch(FishingEvent.Catch e) {
@@ -25,8 +24,8 @@ public class PokemonCatchEvent {
 		Random random = new Random();
 
 		level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
-		if (!config.getcatchMessage().equalsIgnoreCase("false")) {
-			player.sendSystemMessage(Component.literal(config.getcatchMessage()));
+		if (!Config.catchMessage.get().equalsIgnoreCase("false")) {
+			player.sendSystemMessage(Component.literal(Config.catchMessage.get()));
 		}
 
 	}
